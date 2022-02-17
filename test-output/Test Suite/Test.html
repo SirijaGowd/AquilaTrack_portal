@@ -1,0 +1,494 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>83/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Feb 04 09:35:59 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>622 seconds (622989 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.DeviceBtryLow_Enable_Edit()'><b>DeviceBtryLow_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.trackingButtonIsEnabledTest()'><b>trackingButtonIsEnabledTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>0</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Driverstestcase.downloadbtn()'><b>downloadbtn</b><br>Test class: com.Aquiltrack.qa.Testcases.Driverstestcase</td>
+<td></td>
+<td>1</td>
+<td>com.Aquiltrack.qa.Testcases.Driverstestcase@7e3f95fe</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Conditional_Enable_Delete()'><b>Conditional_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.nonTrackingButtonIsEnabledTest()'><b>nonTrackingButtonIsEnabledTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>1</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Refuel_Enable_Delete()'><b>Refuel_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.currentTrackinfoPageTest()'><b>currentTrackinfoPageTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>2</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.UserTest.checksublogin()'><b>checksublogin</b><br>Test class: com.Aquiltrack.qa.Testcases.UserTest</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.UserTest@24bdb479</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.DeviceBtryLow_Enable_Delete()'><b>DeviceBtryLow_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Towing_ALert_Disable()'><b>Towing_ALert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.currentSummaryPageTest()'><b>currentSummaryPageTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>1</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Schedule_Enable_Edit()'><b>Schedule_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.SearchedResuktAtCurrentTrackinfoPageTest()'><b>SearchedResuktAtCurrentTrackinfoPageTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>2</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.downloadiconAtCurrentSummaryTest()'><b>downloadiconAtCurrentSummaryTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>2</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.NoResponse_ALert_Enable_Delete()'><b>NoResponse_ALert_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.downloadiconAtCurrentTracknfoTest()'><b>downloadiconAtCurrentTracknfoTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>2</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Idle_ALert_Disable()'><b>Idle_ALert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.LoginTest.loginmethod()'><b>loginmethod</b><br>Test class: com.Aquiltrack.qa.Testcases.LoginTest</td>
+<td></td>
+<td>3</td>
+<td>com.Aquiltrack.qa.Testcases.LoginTest@7098b907</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Driverstestcase.Edit_DriverDetails()'><b>Edit_DriverDetails</b><br>Test class: com.Aquiltrack.qa.Testcases.Driverstestcase</td>
+<td></td>
+<td>14</td>
+<td>com.Aquiltrack.qa.Testcases.Driverstestcase@7e3f95fe</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.links()'><b>links</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>11</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AOITest.editAOITest()'><b>editAOITest</b><br>Test class: com.Aquiltrack.qa.Testcases.AOITest</td>
+<td></td>
+<td>12</td>
+<td>com.Aquiltrack.qa.Testcases.AOITest@1ddae9b5</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AlertsTest.vehicle_ALert_hour()'><b>vehicle_ALert_hour</b><br>Test class: com.Aquiltrack.qa.Testcases.AlertsTest</td>
+<td></td>
+<td>12</td>
+<td>com.Aquiltrack.qa.Testcases.AlertsTest@34625ccd</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.DevicePullout_Enable_Delete()'><b>DevicePullout_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Route_Alert_Enable_Delete()'><b>Route_Alert_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.AOI_Alert_Enable_Delete()'><b>AOI_Alert_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Fall_ALert_Disable()'><b>Fall_ALert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.OverSpeed_Alert_Disable()'><b>OverSpeed_Alert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>13</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.AOI_Alert_Enable_Edit()'><b>AOI_Alert_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>6</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Halt_Alert_Disable()'><b>Halt_Alert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Routetestcases.deleteRouteTest()'><b>deleteRouteTest</b><br>Test class: com.Aquiltrack.qa.Testcases.Routetestcases</td>
+<td></td>
+<td>7</td>
+<td>com.Aquiltrack.qa.Testcases.Routetestcases@427b5f92</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.NoResponse_ALert_Enable_Edit()'><b>NoResponse_ALert_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Scheduele_Enable_deletebtn()'><b>Scheduele_Enable_deletebtn</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Halt_Enable_Deletebtn()'><b>Halt_Enable_Deletebtn</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.NOnTrackingButtonIsEnabledTestClick()'><b>NOnTrackingButtonIsEnabledTestClick</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>2</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Towing_ALert_Enable_Edit()'><b>Towing_ALert_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>7</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Fall_ALert_Enable_Edit()'><b>Fall_ALert_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.clickonlivealert()'><b>clickonlivealert</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.VehicleBtryLow_Disable()'><b>VehicleBtryLow_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.viewColumnAtCurrentTracknfoTest()'><b>viewColumnAtCurrentTracknfoTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>12</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.viewColumnAtCurrentSummaryTest()'><b>viewColumnAtCurrentSummaryTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>11</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.DevicePullout_Enable_Edit()'><b>DevicePullout_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Conditional_Disable()'><b>Conditional_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>6</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.TrackingButtonIsEnabledTestClick()'><b>TrackingButtonIsEnabledTestClick</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>2</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Driverstestcase.add()'><b>add</b><br>Test class: com.Aquiltrack.qa.Testcases.Driverstestcase</td>
+<td></td>
+<td>7</td>
+<td>com.Aquiltrack.qa.Testcases.Driverstestcase@7e3f95fe</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Schedule_Disable()'><b>Schedule_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Panic_Alert_Disable()'><b>Panic_Alert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>10</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Fall_ALert_Enable_Delete()'><b>Fall_ALert_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>3</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Idle_Enable_edit()'><b>Idle_Enable_edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AOITest.createAOIUsingPolygonAndCoordinatesTest()'><b>createAOIUsingPolygonAndCoordinatesTest</b><br>Test class: com.Aquiltrack.qa.Testcases.AOITest</td>
+<td></td>
+<td>8</td>
+<td>com.Aquiltrack.qa.Testcases.AOITest@1ddae9b5</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Route_Alert_Enable_Edit()'><b>Route_Alert_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>8</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Route_Alert_Disable()'><b>Route_Alert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>6</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Idle_Enable_deletebtn()'><b>Idle_Enable_deletebtn</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>7</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AOITest.AoibulkDownload()'><b>AoibulkDownload</b><br>Test class: com.Aquiltrack.qa.Testcases.AOITest</td>
+<td></td>
+<td>1</td>
+<td>com.Aquiltrack.qa.Testcases.AOITest@1ddae9b5</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Pilferage_Disable()'><b>Pilferage_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Pilferage_Enable_delete()'><b>Pilferage_Enable_delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>3</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AlertsTest.vehicle_ALert_Month()'><b>vehicle_ALert_Month</b><br>Test class: com.Aquiltrack.qa.Testcases.AlertsTest</td>
+<td></td>
+<td>13</td>
+<td>com.Aquiltrack.qa.Testcases.AlertsTest@34625ccd</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.VehicleBtryLow_Enable_Edit()'><b>VehicleBtryLow_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Halt_ALert_Enable_Edit()'><b>Halt_ALert_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>2</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.DevicePullout_Disable()'><b>DevicePullout_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AOITest.testdeleteAOI()'><b>testdeleteAOI</b><br>Test class: com.Aquiltrack.qa.Testcases.AOITest</td>
+<td></td>
+<td>7</td>
+<td>com.Aquiltrack.qa.Testcases.AOITest@1ddae9b5</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Refuel_Enable_Edit()'><b>Refuel_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.UserTest.edituserdeatails()'><b>edituserdeatails</b><br>Test class: com.Aquiltrack.qa.Testcases.UserTest</td>
+<td></td>
+<td>9</td>
+<td>com.Aquiltrack.qa.Testcases.UserTest@24bdb479</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Routetestcases.editRouteDetailsTest()'><b>editRouteDetailsTest</b><br>Test class: com.Aquiltrack.qa.Testcases.Routetestcases</td>
+<td></td>
+<td>20</td>
+<td>com.Aquiltrack.qa.Testcases.Routetestcases@427b5f92</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Driverstestcase.driverbtn()'><b>driverbtn</b><br>Test class: com.Aquiltrack.qa.Testcases.Driverstestcase</td>
+<td></td>
+<td>1</td>
+<td>com.Aquiltrack.qa.Testcases.Driverstestcase@7e3f95fe</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.NoResponse_ALert_Disable()'><b>NoResponse_ALert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.AOI_Alert_Disable()'><b>AOI_Alert_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>6</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AlertsTest.vehicle_ALert_Day()'><b>vehicle_ALert_Day</b><br>Test class: com.Aquiltrack.qa.Testcases.AlertsTest</td>
+<td></td>
+<td>12</td>
+<td>com.Aquiltrack.qa.Testcases.AlertsTest@34625ccd</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Towing_ALert_Enable_Delete()'><b>Towing_ALert_Enable_Delete</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.UserTest.Deleteuser_assignedvehi()'><b>Deleteuser_assignedvehi</b><br>Test class: com.Aquiltrack.qa.Testcases.UserTest</td>
+<td></td>
+<td>4</td>
+<td>com.Aquiltrack.qa.Testcases.UserTest@24bdb479</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AOITest.createAOIUsingCircleAndCoordinatesTest()'><b>createAOIUsingCircleAndCoordinatesTest</b><br>Test class: com.Aquiltrack.qa.Testcases.AOITest</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.AOITest@1ddae9b5</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.DeviceBtryLow_Disable()'><b>DeviceBtryLow_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AOITest.createAOIUsingCircleAndPlacesTest()'><b>createAOIUsingCircleAndPlacesTest</b><br>Test class: com.Aquiltrack.qa.Testcases.AOITest</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.AOITest@1ddae9b5</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.UserTest.selectedModule()'><b>selectedModule</b><br>Test class: com.Aquiltrack.qa.Testcases.UserTest</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.UserTest@24bdb479</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Refuel_Disable()'><b>Refuel_Disable</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Routetestcases.createRouteUsingAOIsTest()'><b>createRouteUsingAOIsTest</b><br>Test class: com.Aquiltrack.qa.Testcases.Routetestcases</td>
+<td></td>
+<td>31</td>
+<td>com.Aquiltrack.qa.Testcases.Routetestcases@427b5f92</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Conditional_Enable_Edit()'><b>Conditional_Enable_Edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.DashboardTest.SearchedResuktAtCurrentSummaryPageTest()'><b>SearchedResuktAtCurrentSummaryPageTest</b><br>Test class: com.Aquiltrack.qa.Testcases.DashboardTest</td>
+<td></td>
+<td>3</td>
+<td>com.Aquiltrack.qa.Testcases.DashboardTest@5860f3d7</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.UserTest.createUser()'><b>createUser</b><br>Test class: com.Aquiltrack.qa.Testcases.UserTest</td>
+<td></td>
+<td>7</td>
+<td>com.Aquiltrack.qa.Testcases.UserTest@24bdb479</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AlertsTest.vehicle_ALert_Week()'><b>vehicle_ALert_Week</b><br>Test class: com.Aquiltrack.qa.Testcases.AlertsTest</td>
+<td></td>
+<td>12</td>
+<td>com.Aquiltrack.qa.Testcases.AlertsTest@34625ccd</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.UserTest.resetpassword()'><b>resetpassword</b><br>Test class: com.Aquiltrack.qa.Testcases.UserTest</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.UserTest@24bdb479</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.UserTest.CreateRole()'><b>CreateRole</b><br>Test class: com.Aquiltrack.qa.Testcases.UserTest</td>
+<td></td>
+<td>6</td>
+<td>com.Aquiltrack.qa.Testcases.UserTest@24bdb479</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.AOITest.createAOIUsingPolygonAndPlacesTest()'><b>createAOIUsingPolygonAndPlacesTest</b><br>Test class: com.Aquiltrack.qa.Testcases.AOITest</td>
+<td></td>
+<td>7</td>
+<td>com.Aquiltrack.qa.Testcases.AOITest@1ddae9b5</td></tr>
+<tr>
+<td title='com.Aquiltrack.qa.Testcases.Alertconfigtestcases.Pilferage_Enable_edit()'><b>Pilferage_Enable_edit</b><br>Test class: com.Aquiltrack.qa.Testcases.Alertconfigtestcases</td>
+<td></td>
+<td>5</td>
+<td>com.Aquiltrack.qa.Testcases.Alertconfigtestcases@2c7d121c</td></tr>
+</table><p>
+</body>
+</html>
