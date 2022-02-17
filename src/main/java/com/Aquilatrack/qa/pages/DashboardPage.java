@@ -31,7 +31,7 @@ public class DashboardPage extends TestBase {
 	}
 
 	Xls_Reader reader = new Xls_Reader(
-			"C:\\Eclipse WorkSpace\\New folder\\AquilaTrack_portal\\src\\main\\java\\com\\Aquiltrack\\qa\\TestData\\dashboard.xlsx");
+			"D:\\Eclipse WorkSpace\\AquilaTrack_portal\\src\\main\\java\\com\\Aquiltrack\\qa\\TestData\\dashboard.xlsx");
 
 	public static String Searched_Data;
 

@@ -32,7 +32,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream fip = new FileInputStream(
-					"C:\\Eclipse WorkSpace\\Aquilatrack_Portal\\src\\main\\java\\com\\Aquiltrack\\qa\\Configuration\\config.properties");
+					"D:\\Eclipse WorkSpace\\AquilaTrack_portal\\src\\main\\java\\com\\Aquiltrack\\qa\\Configuration\\config.properties");
 			prop.load(fip);
 
 		} catch (FileNotFoundException e) {

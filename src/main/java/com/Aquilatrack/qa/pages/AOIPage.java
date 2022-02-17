@@ -22,7 +22,7 @@ import com.Excel.Utility.Xls_Reader;
 
 public class AOIPage extends TestBase {
 	Xls_Reader reader = new Xls_Reader(
-			"C:\\Eclipse WorkSpace\\New folder\\AquilaTrack_portal\\src\\main\\java\\com\\Aquiltrack\\qa\\TestData\\AOI.xlsx");
+			"D:\\Eclipse WorkSpace\\AquilaTrack_portal\\src\\main\\java\\com\\Aquiltrack\\qa\\TestData\\AOI.xlsx");
 
 	public AOIPage() {
 		PageFactory.initElements(driver, this);

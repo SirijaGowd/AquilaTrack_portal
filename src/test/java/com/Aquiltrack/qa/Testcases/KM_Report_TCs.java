@@ -16,56 +16,56 @@ import com.Excel.Utility.TestUtil;
 
 public class KM_Report_TCs extends TestBase {
 
-    LoginPage loginpage;
-    DashboardPage dashbrdpage;
-    KM_Report_Page kmpage;
+	LoginPage loginpage;
+	DashboardPage dashbrdpage;
+	KM_Report_Page kmpage;
 
-    public KM_Report_TCs() {
-	super();
-    }
+	public KM_Report_TCs() {
+		super();
+	}
 
-    @BeforeClass
-    public void setup() throws InterruptedException {
-	Intialization();
+	@BeforeClass
+	public void setup() throws InterruptedException {
+		Intialization();
 
-	loginpage = new LoginPage();
-	dashbrdpage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
+		loginpage = new LoginPage();
+		dashbrdpage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 
-	kmpage = dashbrdpage.clickonKM_TAB();
-    }
+		kmpage = dashbrdpage.clickonKM_TAB();
+	}
 
-    @AfterMethod(alwaysRun = true)
-    public void refreshthe_page() throws InterruptedException {
-	driver.navigate().refresh();
-	driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-    }
+	@AfterMethod(alwaysRun = true)
+	public void refreshthe_page() throws InterruptedException {
+		driver.navigate().refresh();
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+	}
 
-    @AfterClass
-    public void teardown() {
-	driver.quit();
-    }
+	@AfterClass
+	public void teardown() {
+		driver.quit();
+	}
 
-    @Test(priority = 1)
-    public void km_Daily() throws InterruptedException, AWTException {
-	kmpage.clickDaily();
-	kmpage.From();
-	kmpage.km_To();
-	kmpage.Get_Report();
-	//kmpage.KM_Search();
+	@Test(priority = 1)
+	public void km_Daily() throws InterruptedException, AWTException {
+		kmpage.clickDaily();
+		kmpage.From();
+		kmpage.km_To();
+		kmpage.Get_Report();
+		// kmpage.KM_Search();
 
-	kmpage.KM_Download();
-	kmpage.km_view_column();
-    }
+		kmpage.KM_Download();
+		kmpage.km_view_column();
+	}
 
-    @Test(priority = 2)
-    public void km_Month() throws InterruptedException, AWTException {
-	kmpage.clickMonth();
-	kmpage.From();
-	kmpage.km_To();
-	kmpage.Get_Report();
+	@Test(priority = 2)
+	public void km_Month() throws InterruptedException, AWTException {
+		kmpage.clickMonth();
+		kmpage.From();
+		kmpage.km_To();
+		kmpage.Get_Report();
 
-	kmpage.KM_Download();
-	kmpage.KM_filter();
-    }
+		kmpage.KM_Download();
+		kmpage.KM_filter();
+	}
 
 }
