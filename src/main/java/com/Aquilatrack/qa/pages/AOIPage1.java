@@ -22,7 +22,7 @@ import com.Excel.Utility.Xls_Reader;
 
 public class AOIPage1 extends TestBase {
 	Xls_Reader reader = new Xls_Reader(
-			"/home/swati/eclipse-workspace/Aquilatrack_Portal/src/main/java/com/Aquiltrack/qa/TestData/AOI.xlsx");
+			"C:\\Eclipse WorkSpace\\New folder\\AquilaTrack_portal\\src\\main\\java\\com\\Aquiltrack\\qa\\TestData\\AOI.xlsx");
 
 	public AOIPage1() {
 		PageFactory.initElements(driver, this);
@@ -130,7 +130,7 @@ public class AOIPage1 extends TestBase {
 	private WebElement Submit;
 	@FindBy(xpath = "//div[contains(text(),'Successfully added 1 AOI(s).')]")
 	private WebElement Success_Bulk_AOI;
-	@FindBy(xpath="//span[text()='AOI']")
+	@FindBy(xpath = "//span[text()='AOI']")
 	private WebElement AOI_Tab;
 
 	public String getText(WebElement WebElement_Name) {
@@ -152,22 +152,17 @@ public class AOIPage1 extends TestBase {
 		System.out.println(Searchfield);
 		String radiustest = reader.getCellData("AOITEST", "radiustest", 2);
 		System.out.println(radiustest);
-		
+
 		Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
 
 		Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
 		// createaoilink.click();
 
-
-
 		Util_WAITS.waitForElementToBeVisible(driver, AoitextField, 20).sendKeys(Searchfield);
 		// AoitextField.sendKeys(Searchfield);
 
-
 		// AoitextField.sendKeys(Keys.ENTER);
 		Util_WAITS.waitForElementToBeVisible(driver, AoitextField, 20).sendKeys(Keys.ENTER);
-
-
 
 		Util_WAITS.waitForElementToBeVisible(driver, radius, 20).sendKeys(radiustest);
 		Thread.sleep(1000);
@@ -195,25 +190,22 @@ public class AOIPage1 extends TestBase {
 		// AOI_Success_Msg.getText();
 	}
 
-	public String createAOIUsingCircleAndCoordinates() throws InterruptedException, ClassNotFoundException, SQLException {
+	public String createAOIUsingCircleAndCoordinates()
+			throws InterruptedException, ClassNotFoundException, SQLException {
 		String latitude = reader.getCellData("CrclCordinates", "Latitude", 2);
 		System.out.println(latitude);
 		String longitude = reader.getCellData("CrclCordinates", "Longitude", 2);
 		System.out.println(longitude);
 		String radiustest = reader.getCellData("CrclCordinates", "radiustest", 2);
 		System.out.println(radiustest);
-		
-	
 
-		
-		
-		//Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
+		// Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
 		// createaoilink.click();
 		Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
 		Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
 
-		 coordrdaiobtn.click();
-	//	Util_WAITS.waitForElementToBEClickable(driver, coordrdaiobtn, 20).click();
+		coordrdaiobtn.click();
+		// Util_WAITS.waitForElementToBEClickable(driver, coordrdaiobtn, 20).click();
 		// Latitudebtn.sendKeys(latitude);
 		Util_WAITS.waitForElementToBeVisible(driver, Latitudebtn, 20).sendKeys(latitude);
 
@@ -246,8 +238,8 @@ public class AOIPage1 extends TestBase {
 		 * 
 		 * }else{ Save_AOI_As.sendKeys(AOI_Name); }
 		 */
-		Statement stmt=MysqlConnection.setup().createStatement();
-		stmt.executeUpdate("insert into AOI values('"+AOI_Name+"')");
+		Statement stmt = MysqlConnection.setup().createStatement();
+		stmt.executeUpdate("insert into AOI values('" + AOI_Name + "')");
 
 		return Util_WAITS.waitForElementToBEClickable(driver, AOI_Success_Msg, 20).getText();
 		// AOI_Success_Msg.getText();
@@ -260,16 +252,15 @@ public class AOIPage1 extends TestBase {
 		System.out.println(Searchfield);
 		String radiustest = reader.getCellData("AOITEST", "radiustest", 2);
 		System.out.println(radiustest);
-		//Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
-		//Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
+		// Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
+		// Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
 		// createaoilink.click();
-		
-		
+
 		Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
 		Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
 
 		Polygenradiobtn.click();
-	//	Util_WAITS.waitForElementToBEClickable(driver, Polygenradiobtn, 20).click();
+		// Util_WAITS.waitForElementToBEClickable(driver, Polygenradiobtn, 20).click();
 		// AoitextField.sendKeys(Searchfield);
 		Util_WAITS.waitForElementToBeVisible(driver, AoitextField, 20).sendKeys(Searchfield);
 
@@ -309,20 +300,19 @@ public class AOIPage1 extends TestBase {
 		System.out.println(longitude);
 		String radiustest = reader.getCellData("CrclCordinates", "radiustest", 2);
 		System.out.println(radiustest);
-		//Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
-		//Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
+		// Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
+		// Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
 		// createaoilink.click();
 
-		
 		Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
 		Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
-		 Polygenradiobtn.click();
-		 Thread.sleep(2000);
-		//Util_WAITS.waitForElementToBEClickable(driver, Polygenradiobtn, 20).click();
+		Polygenradiobtn.click();
+		Thread.sleep(2000);
+		// Util_WAITS.waitForElementToBEClickable(driver, Polygenradiobtn, 20).click();
 
 		coordrdaiobtn.click();
-		//Util_WAITS.waitForElementToBeVisible(driver, coordrdaiobtn, 20).click();
-		//	Latitudebtn.sendKeys(latitude);
+		// Util_WAITS.waitForElementToBeVisible(driver, coordrdaiobtn, 20).click();
+		// Latitudebtn.sendKeys(latitude);
 		Util_WAITS.waitForElementToBeVisible(driver, Latitudebtn, 20).sendKeys(latitude);
 
 		// lognitudebtn.sendKeys(longitude);
@@ -378,7 +368,7 @@ public class AOIPage1 extends TestBase {
 	public String editAOI() throws InterruptedException, ClassNotFoundException, SQLException {
 
 		// back.click();
-		// 
+		//
 		Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
 		String AOI_Name = clickAtSerachedAOI();
 
@@ -388,7 +378,7 @@ public class AOIPage1 extends TestBase {
 		String Edited_AOI_Name = editAOIName();
 
 		/*
-		 * Circle.click();  Polygon.click();;
+		 * Circle.click(); Polygon.click();;
 		 */
 
 		editFenceBuffer();
@@ -396,15 +386,11 @@ public class AOIPage1 extends TestBase {
 		// confirmedit.click();
 		Util_WAITS.waitForElementToBEClickable(driver, confirmedit, 20).click();
 
-
 		String Success_Msg = Success_msg.getText();
 		System.out.println(Success_Msg);
 
-
-
-
-		Statement stmt=MysqlConnection.setup().createStatement();
-		stmt.executeUpdate("update AOI set Name='"+Edited_AOI_Name+"' where Name='"  +AOI_Name+"' ");
+		Statement stmt = MysqlConnection.setup().createStatement();
+		stmt.executeUpdate("update AOI set Name='" + Edited_AOI_Name + "' where Name='" + AOI_Name + "' ");
 
 		return Success_Msg;
 
@@ -444,7 +430,7 @@ public class AOIPage1 extends TestBase {
 		String AOI_Name = clickAtSerachedAOI();
 
 		Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
-		
+
 		// deletebtn.click();
 		Util_WAITS.waitForElementToBEClickable(driver, deletebtn, 20).click();
 
@@ -453,15 +439,15 @@ public class AOIPage1 extends TestBase {
 		Statement stmt = MysqlConnection.setup().createStatement();
 		stmt.executeUpdate("DELETE FROM testdb.AOI WHERE Name='" + AOI_Name + "'");
 		// okbtn.click();
-		//Util_WAITS.waitForElementToBEClickable(driver, okbtn, 20).click();
-		//return Deleted_Successfully.getText();
+		// Util_WAITS.waitForElementToBEClickable(driver, okbtn, 20).click();
+		// return Deleted_Successfully.getText();
 		// Deleted_Successfully.getText();
 
 	}
 
 	public void bulcreationAOIDownload() throws InterruptedException {
 		Util_WAITS.waitForElementToBEClickable(driver, AOI_Tab, 20).click();
-		
+
 		Util_WAITS.waitForElementToBEClickable(driver, createaoilink, 20).click();
 		// createaoilink.click();
 
@@ -484,7 +470,6 @@ public class AOIPage1 extends TestBase {
 
 		// Upload.click();
 		Util_WAITS.waitForElementToBEClickable(driver, Upload, 20).click();
-
 
 		String loc = "/home/swati/Downloads/AOI Template (1).xlsx";
 		String AOI_Name = "AOI_" + TestBase.generateRandomDigits(2);
