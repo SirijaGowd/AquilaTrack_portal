@@ -51,7 +51,7 @@ public class KM_Report_TCs extends TestBase {
 		kmpage.From();
 		kmpage.km_To();
 		kmpage.Get_Report();
-		// kmpage.KM_Search();
+		kmpage.KM_Search();
 
 		kmpage.KM_Download();
 		kmpage.km_view_column();
