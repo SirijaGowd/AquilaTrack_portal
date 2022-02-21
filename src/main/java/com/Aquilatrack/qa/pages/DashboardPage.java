@@ -311,10 +311,10 @@ public class DashboardPage extends TestBase {
 	public String Searched_Data() throws ClassNotFoundException, SQLException {
 		Statement stmt = MysqlConnection.setup().createStatement();
 
-		ResultSet rs = stmt.executeQuery("select * from Vehicle");
+		ResultSet rs = stmt.executeQuery("select * from testdb.aquila_test_data");
 		// Searched_Data;
 		while (rs.next()) {
-			Searched_Data = rs.getString("Number");
+			Searched_Data = rs.getString("Vehicle");
 			// return vehicle_no;
 		}
 		// System.out.println(vehicle_no);
@@ -452,9 +452,9 @@ public class DashboardPage extends TestBase {
 
 	}
 
-	public UsersPage clickonuserpage() {
+	public UsersPage1 clickonuserpage() {
 		usertab.click();
-		return new UsersPage();
+		return new UsersPage1();
 	}
 
 	public Routespage clickonroutespage() {

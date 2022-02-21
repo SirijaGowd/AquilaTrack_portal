@@ -129,7 +129,7 @@ public class AlertsPage extends TestBase {
 
 //=============Alerts Types============
 
-	@FindBy(xpath = "//img[@src='https://icons.aquilatrack.com/default/alerts/Panic.svg']")
+	@FindBy(xpath = "//p[contains(text(),'Panic')]")
 	WebElement alert_panic;
 
 	public void Alert_panic() throws InterruptedException {
@@ -138,7 +138,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = "//img[@src='https://icons.aquilatrack.com/default/alerts/OverspeedIcon.svg']")
+	@FindBy(xpath = "//p[contains(text(),'Overspeed')]")
 	WebElement alert_Overspeed;
 
 	public void Alert_Overspeed() throws InterruptedException {
@@ -147,7 +147,7 @@ public class AlertsPage extends TestBase {
 
 	}
 
-	@FindBy(xpath = "//img[@src='https://icons.aquilatrack.com/default/alerts/TowIcon.svg']")
+	@FindBy(xpath = "//p[contains(text(),'Towing')]")
 	WebElement alert_towing;
 
 	public void Alert_Towel() throws InterruptedException {
@@ -156,7 +156,7 @@ public class AlertsPage extends TestBase {
 
 	}
 
-	@FindBy(xpath = "//img[@src='https://icons.aquilatrack.com/default/alerts/NoresponseIcon.svg']")
+	@FindBy(xpath = "//p[contains(text(),'No Response')]")
 	WebElement alert_noresponse;
 
 	public void Alert_NoRespose() throws InterruptedException {
@@ -164,7 +164,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = "//img[@src='https://icons.aquilatrack.com/default/alerts/ExtBatLowIcon.svg']")
+	@FindBy(xpath = "//p[contains(text(),'Vehicle Battery Low')]")
 	WebElement alert_vehicleBatteryLow;
 
 	public void Alert_Vehicle_batteryLow() throws InterruptedException {
@@ -173,7 +173,7 @@ public class AlertsPage extends TestBase {
 
 	}
 
-	@FindBy(xpath = "//p[normalize-space()='Device Battery Low']")
+	@FindBy(xpath = "//p[contains(text(),'Device Battery Low')]")
 	WebElement alert_deviceBatteryLow;
 
 	public void Alert_Device_batteryLow() throws InterruptedException {
@@ -181,7 +181,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = "//div[@title=\"If the device is unplugged from the vehicle's battery, this alert will be generated\"]")
+	@FindBy(xpath = "//p[contains(text(),'Device Pullout')]")
 	WebElement alert_devicePullout;
 
 	public void Alert_Device_PullOut() throws InterruptedException {
@@ -189,7 +189,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = "// p[normalize-space()='AOI Geofence Breach']")
+	@FindBy(xpath = "//p[contains(text(),'AOI Geofence Breach')]")
 	WebElement alert_AOI_Breach;
 
 	public void Alert_AOI_Geofence_Breach() throws InterruptedException {
@@ -197,7 +197,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = "//p[normalize-space()='Route fence Breach IN/OUT']")
+	@FindBy(xpath = "//p[contains(text(),'Route fence Breach IN/OUT')]")
 	WebElement alert_RouteFence_Breach;
 
 	public void Alert_RouteFence_Breach() throws InterruptedException {
@@ -206,7 +206,7 @@ public class AlertsPage extends TestBase {
 
 	}
 
-	@FindBy(xpath = "//p[normalize-space()='Halt alert']")
+	@FindBy(xpath = "//p[contains(text(),'Halt alert')]")
 	WebElement alert_halt;
 
 	public void Alert_HAlt() throws InterruptedException {
@@ -214,7 +214,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = " //p[normalize-space()='Idle Alert']")
+	@FindBy(xpath = "//p[contains(text(),'Idle Alert')]")
 	WebElement alert_Idle;
 
 	public void Alert_Idle() throws InterruptedException {
@@ -222,7 +222,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = "//p[normalize-space()='Schedule Maintenance']")
+	@FindBy(xpath = "//p[contains(text(),'Schedule Maintenance')]")
 	WebElement alert_schedule_maintanance;
 
 	public void Alert_Schedule_Maintanance() throws InterruptedException {
@@ -231,7 +231,7 @@ public class AlertsPage extends TestBase {
 
 	}
 
-	@FindBy(xpath = "//p[normalize-space()='Conditional Maintenance']")
+	@FindBy(xpath = "//p[contains(text(),'Conditional Maintenance')]")
 	WebElement alert_conditinal_maintainance;
 
 	public void Alert_Conditional_Maintance() throws InterruptedException {
@@ -239,7 +239,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = "//p[normalize-space()='Refuel Alert']")
+	@FindBy(xpath = "//p[contains(text(),'Refuel Alert')]")
 	WebElement alert_refuel;
 
 	public void Alert_Refuel() throws InterruptedException {
@@ -247,7 +247,7 @@ public class AlertsPage extends TestBase {
 		Thread.sleep(500);
 	}
 
-	@FindBy(xpath = " //p[normalize-space()='Pilferage Alert']")
+	@FindBy(xpath = "//p[contains(text(),'Pilferage Alert')]")
 	WebElement alert_pilferage;
 
 	public void Alert_Pilferage() throws InterruptedException {

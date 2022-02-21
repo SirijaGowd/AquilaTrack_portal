@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import com.Aquilatrack.qa.pages.DashboardPage;
 import com.Aquilatrack.qa.pages.LoginPage;
-import com.Aquilatrack.qa.pages.UsersPage;
+import com.Aquilatrack.qa.pages.UsersPage1;
 import com.Aquiltrack.qa.Base.TestBase;
 import com.Excel.Utility.TestUtil;
 
@@ -21,7 +21,7 @@ public class UserTest extends TestBase {
 	LoginPage loginpge;
 	DashboardPage dbpage;
 
-	UsersPage users;
+	UsersPage1 users;
 
 	String sheetName = "createuser";
 
@@ -32,7 +32,7 @@ public class UserTest extends TestBase {
 	@BeforeClass
 	public void setup() throws InterruptedException {
 		Intialization();
-		users = new UsersPage();
+		users = new UsersPage1();
 		loginpge = new LoginPage();
 		dbpage = loginpge.login(prop.getProperty("username"), prop.getProperty("password"));
 		users = dbpage.clickonuserpage();

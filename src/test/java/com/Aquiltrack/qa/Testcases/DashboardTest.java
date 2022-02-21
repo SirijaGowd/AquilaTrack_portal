@@ -5,7 +5,7 @@ import java.net.MalformedURLException;
 import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -40,23 +40,23 @@ public class DashboardTest extends DashboardPage {
 	@Test(priority = 1)
 	public void trackingButtonIsEnabledTest() throws SQLException, ClassNotFoundException, IOException {
 
-		AssertJUnit.assertEquals(true, dashbrdpage.trackingButton());
-		AssertJUnit.assertEquals(true, dashbrdpage.runningButtonIsEnabled());
-		AssertJUnit.assertEquals(true, dashbrdpage.idleButtonIsEnabled());
+		Assert.assertEquals(true, dashbrdpage.trackingButton());
+		Assert.assertEquals(true, dashbrdpage.runningButtonIsEnabled());
+		Assert.assertEquals(true, dashbrdpage.idleButtonIsEnabled());
 
-		AssertJUnit.assertEquals(true, dashbrdpage.haltButtonIsEnabled());
+		Assert.assertEquals(true, dashbrdpage.haltButtonIsEnabled());
 
-		AssertJUnit.assertEquals(true, dashbrdpage.noGpsButtonIsEnabled());
+		Assert.assertEquals(true, dashbrdpage.noGpsButtonIsEnabled());
 
 	}
 
 	@Test(priority = 2)
 	public void nonTrackingButtonIsEnabledTest() throws SQLException, ClassNotFoundException, IOException {
 
-		AssertJUnit.assertEquals(true, dashbrdpage.nonTrackingButton());
-		AssertJUnit.assertEquals(true, dashbrdpage.offLineButtonIsEnabled());
-		AssertJUnit.assertEquals(true, dashbrdpage.noDataButtonIsEnabled());
-		AssertJUnit.assertEquals(true, dashbrdpage.deadButtonIsEnabled());
+		Assert.assertEquals(true, dashbrdpage.nonTrackingButton());
+		Assert.assertEquals(true, dashbrdpage.offLineButtonIsEnabled());
+		Assert.assertEquals(true, dashbrdpage.noDataButtonIsEnabled());
+		Assert.assertEquals(true, dashbrdpage.deadButtonIsEnabled());
 	}
 
 	@Test(priority = 3)
@@ -78,7 +78,7 @@ public class DashboardTest extends DashboardPage {
 	@Test(priority = 6)
 	public void currentTrackinfoPageTest() throws SQLException, ClassNotFoundException, IOException {
 		// Assert.assertTrue(d.current_TrackinfoPageTest());
-		AssertJUnit.assertEquals("Current Trackinfo", dashbrdpage.current_TrackinfoPage());
+		Assert.assertEquals("Current Trackinfo", dashbrdpage.current_TrackinfoPage());
 	}
 
 	@Test(priority = 7)
@@ -88,7 +88,7 @@ public class DashboardTest extends DashboardPage {
 		// Assert.assertTrue(d.current_TrackinfoPageTest());
 		// Assert.assertEquals("Sorry, no matching records found",
 		// d.saerchAtCurrentTrackinfoPage());
-		AssertJUnit.assertEquals(dashbrdpage.Searched_Data(), dashbrdpage.SearchedResuktAtCurrentTrackinfoPage());
+		Assert.assertEquals(dashbrdpage.Searched_Data(), dashbrdpage.SearchedResuktAtCurrentTrackinfoPage());
 	}
 
 	@Test(priority = 8)
@@ -98,21 +98,21 @@ public class DashboardTest extends DashboardPage {
 		// Assert.assertTrue(d.current_TrackinfoPageTest());
 		// Assert.assertEquals("Sorry, no matching records found",
 		// d.saerchAtCurrentTrackinfoPage());
-		AssertJUnit.assertEquals(0, dashbrdpage.viewColumnAtCurrentTracknfo());
+		Assert.assertEquals(0, dashbrdpage.viewColumnAtCurrentTracknfo());
 	}
 
 	@Test(priority = 8)
 	public void downloadiconAtCurrentTracknfoTest()
 			throws SQLException, ClassNotFoundException, IOException, InterruptedException {
 
-		AssertJUnit.assertTrue(dashbrdpage.downloadiconAtCurrentTracknfo());
+		Assert.assertTrue(dashbrdpage.downloadiconAtCurrentTracknfo());
 	}
 
 	@Test(priority = 9)
 	public void currentSummaryPageTest()
 			throws SQLException, ClassNotFoundException, IOException, InterruptedException {
 
-		AssertJUnit.assertEquals("Current Summary", dashbrdpage.currentSummaryPage());
+		Assert.assertEquals("Current Summary", dashbrdpage.currentSummaryPage());
 	}
 
 	@Test(priority = 10)
@@ -122,7 +122,7 @@ public class DashboardTest extends DashboardPage {
 		// Assert.assertTrue(d.current_TrackinfoPageTest());
 		// Assert.assertEquals("Sorry, no matching records found",
 		// d.saerchAtCurrentTrackinfoPage());
-		AssertJUnit.assertEquals(dashbrdpage.Searched_Data(), dashbrdpage.SearchedResuktAtCurrentSummaryPage());
+		Assert.assertEquals(dashbrdpage.Searched_Data(), dashbrdpage.SearchedResuktAtCurrentSummaryPage());
 	}
 
 	@Test(priority = 11)
@@ -132,14 +132,14 @@ public class DashboardTest extends DashboardPage {
 		// Assert.assertTrue(d.current_TrackinfoPageTest());
 		// Assert.assertEquals("Sorry, no matching records found",
 		// d.saerchAtCurrentTrackinfoPage());
-		AssertJUnit.assertEquals(dashbrdpage.viewColumnAtCurrentSummary(), 0);
+		Assert.assertEquals(dashbrdpage.viewColumnAtCurrentSummary(), 0);
 	}
 
 	@Test(priority = 12)
 	public void downloadiconAtCurrentSummaryTest()
 			throws SQLException, ClassNotFoundException, IOException, InterruptedException {
 
-		AssertJUnit.assertTrue(dashbrdpage.downloadiconAtCurrentSummary());
+		Assert.assertTrue(dashbrdpage.downloadiconAtCurrentSummary());
 	}
 
 	@Test(priority = 13, enabled = false)
