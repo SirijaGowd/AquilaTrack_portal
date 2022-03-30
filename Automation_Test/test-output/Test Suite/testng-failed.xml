@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.Aquilatrack.Listeners.Listenerclass"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.Aquiltrack.qa.Testcases.UserTest">
+        <methods>
+          <include name="createUser"/>
+          <include name="selectedModule"/>
+          <include name="setup"/>
+          <include name="refreshthe_page"/>
+          <include name="teardown"/>
+          <include name="edituserdeatails"/>
+          <include name="CreateRole"/>
+          <include name="Deleteuser_assignedvehi"/>
+          <include name="resetpassword"/>
+        </methods>
+      </class> <!-- com.Aquiltrack.qa.Testcases.UserTest -->
+      <class name="com.Aquiltrack.qa.Testcases.Driverstestcase">
+        <methods>
+          <include name="add"/>
+          <include name="refreshthe_page"/>
+          <include name="Edit_DriverDetails"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.Aquiltrack.qa.Testcases.Driverstestcase -->
+      <class name="com.Aquiltrack.qa.Testcases.Routetestcases">
+        <methods>
+          <include name="setup"/>
+          <include name="createRouteUsingAOIsTest"/>
+          <include name="deleteRouteTest"/>
+          <include name="teardown"/>
+          <include name="editRouteDetailsTest"/>
+          <include name="refreshthe_page"/>
+        </methods>
+      </class> <!-- com.Aquiltrack.qa.Testcases.Routetestcases -->
+      <class name="com.Aquiltrack.qa.Testcases.Activitytest">
+        <methods>
+          <include name="verifyactivitycustom"/>
+          <include name="verifyactivitylastweek"/>
+          <include name="verifyactivitylastmonth"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="refreshpage"/>
+        </methods>
+      </class> <!-- com.Aquiltrack.qa.Testcases.Activitytest -->
+      <class name="com.Aquiltrack.qa.Testcases.DashboardTest">
+        <methods>
+          <include name="SearchedResuktAtCurrentSummaryPageTest"/>
+          <include name="SearchedResuktAtCurrentTrackinfoPageTest"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="refresh"/>
+        </methods>
+      </class> <!-- com.Aquiltrack.qa.Testcases.DashboardTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->

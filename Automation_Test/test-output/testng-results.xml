@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-29T17:51:41 IST" name="Default suite" finished-at="2022-03-29T17:52:18 IST" duration-ms="36590">
+    <groups>
+    </groups>
+    <test started-at="2022-03-29T17:51:41 IST" name="Default test" finished-at="2022-03-29T17:52:18 IST" duration-ms="36590">
+      <class name="com.Aquiltrack.qa.Testcases.Trips_Tcs">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Aquiltrack.qa.Testcases.Trips_Tcs@32502377]" started-at="2022-03-29T17:51:41 IST" name="setup" finished-at="2022-03-29T17:52:08 IST" duration-ms="26890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Trips()[pri:1, instance:com.Aquiltrack.qa.Testcases.Trips_Tcs@32502377]" started-at="2022-03-29T17:52:08 IST" name="Trips" finished-at="2022-03-29T17:52:17 IST" duration-ms="8679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Trips -->
+        <test-method signature="Create_Trip()[pri:2, instance:com.Aquiltrack.qa.Testcases.Trips_Tcs@32502377]" started-at="2022-03-29T17:52:17 IST" name="Create_Trip" finished-at="2022-03-29T17:52:18 IST" duration-ms="855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_Trip -->
+      </class> <!-- com.Aquiltrack.qa.Testcases.Trips_Tcs -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
