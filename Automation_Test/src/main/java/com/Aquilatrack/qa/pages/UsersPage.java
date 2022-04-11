@@ -18,7 +18,7 @@ import com.Excel.Utility.MysqlConnection;
 import com.Excel.Utility.Util_WAITS;
 import com.Excel.Utility.Xls_Reader;
 
-public class UsersPage1 extends TestBase {
+public class UsersPage extends TestBase {
 	Xls_Reader reader = new Xls_Reader("./src/main/java/com/Aquiltrack/qa/TestData/Users.xlsx");
 
 	// xpath or locators
@@ -173,7 +173,7 @@ public class UsersPage1 extends TestBase {
 	@FindBy(xpath = "//span[normalize-space()='Dashboard']")
 	WebElement dashboard;
 
-	public UsersPage1() {
+	public UsersPage() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -267,67 +267,76 @@ public class UsersPage1 extends TestBase {
 
 	}
 
+	public static String mail_id;
+
+	public String email_Id() throws ClassNotFoundException, SQLException {
+		Statement stmt = MysqlConnection.setup().createStatement();
+
+		ResultSet rs = stmt.executeQuery(
+				"SELECT email from test_automation_test.user_details where clientLoginId=3959 order by rand() limit 1;");
+		while (rs.next()) {
+			mail_id = rs.getString("email");
+		}
+
+		return mail_id;
+	}
+
+	public static String mobile_No;
+
+	public String Mobile_No() throws ClassNotFoundException, SQLException {
+		Statement stmt = MysqlConnection.setup().createStatement();
+
+		ResultSet rs = stmt.executeQuery(
+				"SELECT contactNumber from test_automation_test.user_details where clientLoginId=3959 order by rand() limit 1;");
+		while (rs.next()) {
+			mobile_No = rs.getString("contactNumber");
+		}
+
+		return mobile_No;
+	}
+
 	public void createNewUser() throws InterruptedException, ClassNotFoundException, SQLException {
 
 		Util_WAITS.waitForElementToBEClickable(driver, userTab, 10).click();
 
-		// userTab.click();
 		String User_Name = "User_" + TestBase.generateRandomDigits(2);
 		Util_WAITS.waitForElementToBeVisible(driver, name, 10).sendKeys(User_Name);
 
-		Util_WAITS.waitForElementToBeVisible(driver, email, 10).sendKeys("Ravi@gmail.com");
-		String MobNo = "987657" + TestBase.generateRandomDigits(4);
-		Util_WAITS.waitForElementToBeVisible(driver, mobno, 10).sendKeys(MobNo);
-		// mobno.sendKeys(MobNo);
+		Util_WAITS.waitForElementToBeVisible(driver, email, 10).sendKeys(email_Id());
+
+		Util_WAITS.waitForElementToBeVisible(driver, mobno, 10).sendKeys(Mobile_No());
 
 		Calendar.getInstance();
 		long Current_time = System.currentTimeMillis();
-		// username.sendKeys("user" + Current_time);
-		// password.sendKeys("pass" + Current_time);
+
 		Util_WAITS.waitForElementToBeVisible(driver, username, 10).sendKeys(User_Name);
 		Util_WAITS.waitForElementToBeVisible(driver, password, 10).sendKeys(User_Name);
 
-		// username.sendKeys(User_Name);
-		// password.sendKeys(User_Name);
-
 		Statement stmt = MysqlConnection.setup().createStatement();
 
-		ResultSet rs = stmt.executeQuery("select * from role");
-		String Role_Name = null;
-		while (rs.next()) {
-			Role_Name = rs.getString(1);
-			break;
-			// return vehicle_no;
-		}
+		ResultSet rs = stmt.executeQuery("SELECT * FROM test_automation_test.role order by rand() limit 1;");
 
-		ResultSet rs1 = stmt.executeQuery("select * from VehicleGroup ");
-		String Group_Name = null;
-		while (rs1.next()) {
-			Group_Name = rs1.getString(1);
-			break;
-		}
-		// return vehicle_no; }
+		String Role_Name = rs.getString("Name");
 
-		System.out.println("Entered:: " + Role_Name);
+		ResultSet rs1 = stmt.executeQuery(
+				"SELECT * FROM test_automation_test.group_master where clientLoginId=3959 order by rand() limit 1;");
 
-		System.out.println("Entered:: " + Role_Name);
-		enterRole(Role_Name);
-		Thread.sleep(1000);
-		enterGroup(Group_Name);
-		Thread.sleep(1000);
+		String Group_Name = rs1.getString("groupName");
+
+		System.out.println("Entered:: " + Group_Name);
+
+
+//		enterRole(Role_Name);
+//		Thread.sleep(1000);
+//		enterGroup(Group_Name);
+//		Thread.sleep(1000);
 		Util_WAITS.waitForElementToBEClickable(driver, SAVE_button, 10).click();
 
-		// SAVE_button.click();
 		Thread.sleep(1000);
-		// String actual_msg = success_msg_new_user_created.getText();
-		// String expected_masg = "Added a new user";
 
 		Statement stmt2 = MysqlConnection.setup().createStatement();
 		stmt.executeUpdate("insert into user(Name) values('" + User_Name + "')");
 		System.out.println(User_Name);
-
-//		Assert.assertEquals(actual_msg, expected_masg);
-
 	}
 
 	public void enterRole(String Role_Name) throws InterruptedException, ClassNotFoundException, SQLException {
@@ -335,11 +344,6 @@ public class UsersPage1 extends TestBase {
 		Util_WAITS.waitForElementToBeVisible(driver, select_role, 10).sendKeys(Role_Name);
 		Util_WAITS.waitForElementToBeVisible(driver, select_role, 10).sendKeys(Keys.ARROW_DOWN);
 		Util_WAITS.waitForElementToBeVisible(driver, select_role, 20).sendKeys(Keys.ENTER);
-
-//		select_role.sendKeys(Role_Name);
-//		select_role.sendKeys(Keys.ARROW_DOWN);
-//		select_role.sendKeys(Keys.ENTER);
-
 	}
 
 	public void enterGroup(String Groupname) throws InterruptedException {

@@ -26,7 +26,7 @@ public class LoginTest extends TestBase {
 	@Test
 	public void loginmethod() throws InterruptedException {
 		dbpage = loginpge.login(prop.getProperty("username"), prop.getProperty("password"));
-		// ExtentLogger.pass("login successfull");
+		// ExtentLogger.pass("login successfully");
 	}
 
 	@AfterMethod
